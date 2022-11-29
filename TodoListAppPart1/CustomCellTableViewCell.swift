@@ -33,17 +33,14 @@ class CustomCellTableViewCell: UITableViewCell {
     @IBOutlet weak var labelStatus: UILabel!
     @IBOutlet weak var switchStatus: UISwitch!
     
+    var IndexCell: Int?
     // even for completed tastk
     
-    
-    @IBAction func completeButton(_ sender: UISwitch, forEvent event: UIEvent) {
-        
-        
-        
-    }
-    
     // Show info data from array todoitems to Objects to custom cell in list table view
-    func putDataInControlsCell(cellData: ToDoItem){
+    func putDataInControlsCell(cellData: ToDoItem , indexRow: Int ){
+        
+        IndexCell = indexRow
+        
         if (cellData.isCompleted == true){
             switchStatus.isOn = false
         } else {

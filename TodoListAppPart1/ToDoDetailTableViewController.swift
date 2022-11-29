@@ -36,7 +36,8 @@ class ToDoDetailTableViewController: UITableViewController {
         super.viewDidLoad()
         
         if toDoItem == nil {
-            toDoItem = ToDoItem(name: "",
+            toDoItem = ToDoItem(isSelected: false,
+                                name: "",
                                 dueDate: Date().addingTimeInterval(24*60*60),
                                 notes: "",
                                 isCompleted: false,

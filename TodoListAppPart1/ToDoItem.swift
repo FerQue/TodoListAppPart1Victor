@@ -8,6 +8,7 @@
 import Foundation
 
 struct ToDoItem: Codable {
+    var isSelected: Bool?
     var name: String
     var dueDate: Date
     var notes: String
